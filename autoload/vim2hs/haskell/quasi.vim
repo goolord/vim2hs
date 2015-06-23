@@ -46,6 +46,16 @@ function! vim2hs#haskell#quasi#interpolation() " {{{
   syntax match hsRubyQQ /|\%(\_.\%(|]\)\@!\)*\_.|/hs=s+1,he=e-1
     \ contained containedin=hsRubyQQuote contains=hsRubyInterpolation,@Spell
 
+  syntax region hsShakespeareInterpolation matchgroup=hsShakespeareAntiQuote
+    \ start="#{" end="}"
+    \ keepend contained contains=TOP
+
+  syntax match hsShakespeareQQuote /\[\$\?lt|\%(\_.\%(|]\)\@!\)*\_.|\]/
+    \ contains=hsShakespeareQQ
+
+  syntax match hsShakespeareQQ /|\%(\_.\%(|]\)\@!\)*\_.|/hs=s+1,he=e-1
+    \ contained containedin=hsShakespeareQQuote contains=hsShakespeareInterpolation,@Spell
+
   highlight default link hsStringQQuote Delimiter
   highlight default link hsStringQQ String
   highlight default link hsP6QQuote Delimiter
@@ -55,6 +65,9 @@ function! vim2hs#haskell#quasi#interpolation() " {{{
   highlight default link hsRubyQQuote Delimiter
   highlight default link hsRubyQQ String
   highlight default link hsRubyAntiQuote PreProc
+  highlight default link hsShakespeareQQuote Delimiter
+  highlight default link hsShakespeareQQ Macro
+  highlight default link hsShakespeareAntiQuote Delimiter
 endfunction " }}}
 
 function! vim2hs#haskell#quasi#rlangqq() " {{{
