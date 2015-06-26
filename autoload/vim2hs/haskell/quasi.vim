@@ -54,7 +54,7 @@ function! vim2hs#haskell#quasi#interpolation() " {{{
     \ contains=hsShakespeareQQ
 
   syntax match hsShakespeareQQ /|\%(\_.\%(|]\)\@!\)*\_.|/hs=s+1,he=e-1
-    \ contained containedin=hsShakespeareQQuote contains=hsShakespeareInterpolation,@Spell
+    \ contained containedin=hsShakespeareQQuote contains=hsShakespeareInterpolation,@NoSpell
 
   highlight default link hsStringQQuote Delimiter
   highlight default link hsStringQQ String
