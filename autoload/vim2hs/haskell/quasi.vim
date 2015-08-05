@@ -66,7 +66,7 @@ function! vim2hs#haskell#quasi#interpolation() " {{{
   highlight default link hsRubyQQ String
   highlight default link hsRubyAntiQuote PreProc
   highlight default link hsShakespeareQQuote Delimiter
-  highlight default link hsShakespeareQQ Macro
+  highlight default link hsShakespeareQQ String
   highlight default link hsShakespeareAntiQuote Delimiter
 endfunction " }}}
 
