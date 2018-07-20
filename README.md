@@ -3,6 +3,8 @@
 
 *"Vim to Haskell": A collection of vimscripts for Haskell development.*
 
+**This is an actively maintaned fork of https://github.com/dag/vim2hs**
+
 Features
 --------
 
