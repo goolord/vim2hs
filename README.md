@@ -31,29 +31,10 @@ Features
 Installation
 ------------
 
-You need at least Vim 7.3, and for the HPaste command Python 2, not too
-ancient.  Beyond that, just clone this repo and add it to your
-`'runtimepath'`.  [Vundle](https://github.com/gmarik/vundle) is great for
-automating that, [Pathogen](https://github.com/tpope/vim-pathogen) is also
+You need at least Vim 7.3, Beyond that, just clone this repo and add it to 
+your `'runtimepath'`.  [Vundle](https://github.com/gmarik/vundle) is great 
+for automating that, [Pathogen](https://github.com/tpope/vim-pathogen) is also
 popular.
-
-See Also
---------
-
-Here are some other Vimscripts that complement vim2hs nicely:
-
-* Omni completion: [neco-ghc](https://github.com/ujihisa/neco-ghc)
-* Syntax checking and linting:
-  [syntastic](https://github.com/scrooloose/syntastic)
-* Type inspection:
-  [haskellmode](https://github.com/lukerandall/haskellmode-vim) or (better)
-  [ghcmod](https://github.com/eagletmt/ghcmod-vim)
-* Shakespeare templates highlighting:
-  [html-template-syntax](https://github.com/pbrisbin/html-template-syntax)
-* Layout as text objects:
-  [textobj-indent](https://github.com/kana/vim-textobj-indent) *(vim2hs
-  includes a less powerful version of this that I wrote before I discovered
-  this Vimscript; it might be removed in favor of this one in the future)*
 
 Overview
 --------
