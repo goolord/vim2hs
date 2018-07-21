@@ -25,7 +25,6 @@ Features
   function composition.
 * Integrates with third-party plugins, but doesn't require them:
   snippets for UltiSnips and patterns for Tabular.
-* Posts buffers and line-ranges to [hpaste.org](http://hpaste.org).
 * Highly configurable, most of the above can be disabled if it gets in the
   way.
 
@@ -189,33 +188,6 @@ list and you can jump between them with `:cn` and `:cp`, although I
 recommend setting up
 [FuzzyFinder](https://github.com/vim-scripts/FuzzyFinder) and using its
 `:FufQuickfix` command instead.
-
-### HPaste
-
-To pastebin the contents of the current buffer do this:
-
-```vim
-:HPaste
-```
-
-The newly created paste URL will be put in the `+` register, meaning your
-normal desktop clipboard.
-
-Alternatively, you can select a range of lines with Vim's VISUAL modes and
-type the same as above, which should result in this:
-
-```
-:'<,'>HPaste
-```
-
-Which of course will paste the selected lines only.
-
-If you get tired of entering your author name every time you can configure
-it globally like so:
-
-```vim
-let g:hpaste_author = 'donri'
-```
 
 ### UltiSnips
 
