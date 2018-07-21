@@ -114,11 +114,7 @@ function! vim2hs#haskell#syntax#bindings() " {{{
   syntax match hsIdentifier
     \ "^\k\+\ze.*\%(\n\s.*\|\n\)*[[:punct:]]\@<!=[[:punct:]]\@!"
 
-  syntax match hsIdentifierNested
-    \ "^\(\s\+\)\(\<let\>\)\@!\k\+\ze.*\%(\n\1\s\+|.*\|\n\s*\)*\([[:punct:]]\+\|{[^}]*\)\@<!=[[:punct:]]\@!"
-
   highlight default link hsIdentifier Identifier
-  highlight default link hsIdentifierNested Identifier
 endfunction " }}}
 
 
