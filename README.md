@@ -25,7 +25,7 @@ Features
   function composition.
 * Integrates with third-party plugins, but doesn't require them:
   snippets for UltiSnips and patterns for Tabular.
-* Posts buffers and line-ranges to [hpaste.org](http://hpaste.org).
+* Posts buffers and line-ranges to [hpaste.org](http://hpaste.org). **Note:** hpaste doesn't seem to exist anymore
 * Highly configurable, most of the above can be disabled if it gets in the
   way.
 
