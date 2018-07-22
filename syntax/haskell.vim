@@ -21,6 +21,7 @@ call vim2hs#letdefault('g:haskell_conceal_enumerations' , 1)
 call vim2hs#letdefault('g:haskell_conceal_wide'         , 0)
 call vim2hs#letdefault('g:haskell_conceal_bad'          , 0)
 call vim2hs#letdefault('g:haskell_multiline_strings'    , 0)
+call vim2hs#letdefault('g:haskell_indent_double'        , 0)
 
 
 call vim2hs#haskell#syntax#operators()
