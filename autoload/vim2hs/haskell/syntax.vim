@@ -105,7 +105,7 @@ endfunction " }}}
 " anyway. I would still like this to be faster/more general
 function! vim2hs#haskell#syntax#types() " {{{
   syntax match hsType
-    \ "\(.*\X,\+.*\n\)*\(\(\S\|\s\)*::.*\)\+\(\n\s*\(=>\|->\).*\)*"
+    \ "\(.*\X,\+.*\n\)*\(\(\S\|\s\)*::.*\)\+\(\n\s*\(=>\|->\|,\).*\)*"
     \ contains=TOP,@Spell
 
   highlight default link hsType Type
