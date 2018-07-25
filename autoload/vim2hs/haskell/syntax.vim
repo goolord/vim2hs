@@ -100,10 +100,12 @@ function! vim2hs#haskell#syntax#numbers() " {{{
   highlight default link hsFloat Float
 endfunction " }}}
 
-
+" this isn't very general for multiline type signatures,
+" but the type signatures it doesn't match are usually ugly
+" anyway. I would still like this to be faster/more general
 function! vim2hs#haskell#syntax#types() " {{{
   syntax match hsType
-    \ "^\(\s*\)\%(default\s\+\)\?\%(\k\+\|([^[:alnum:]]\+)\)'*\_s*\(::\|∷\).*\%(\n\1\s.*\)*"
+    \ "\(.*\X,\+.*\n\)*\(\(\S\|\s\)*::.*\)\+\(\n\s*\(=>\|->\).*\)*"
     \ contains=TOP,@Spell
 
   highlight default link hsType Type
