@@ -191,3 +191,31 @@ To disable them, use this configuration:
 ```vim
 let g:haskell_tabular = 0
 ```
+
+### PERFORMANCE
+
+vim2hs can be pretty slow on big files, I am working on this but if you
+need a hotfix, you can disable syntax that is likely superfluous:
+
+```let g:haskell_conceal       = 0
+let g:haskell_quasi         = 0
+let g:haskell_interpolation = 0
+let g:haskell_regex         = 0
+let g:haskell_jmacro        = 0
+let g:haskell_shqq          = 0
+let g:haskell_sql           = 0
+let g:haskell_json          = 0
+let g:haskell_xml           = 0
+let g:haskell_hsp           = 0
+let g:haskell_tabular       = 0
+```
+
+If you need even more performance, I suggest enabling:
+```syntax sync minlines=256
+set lazyredraw
+```
+
+For benchmarking, use syntime. If you notice any bottlenecks, report them on the issue tracker:
+```:h syntime
+```
+
