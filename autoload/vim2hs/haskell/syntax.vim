@@ -10,6 +10,13 @@ function! vim2hs#haskell#syntax#operators() " {{{
   highlight default link hsOperator Operator
 endfunction " }}}
 
+function! vim2hs#haskell#syntax#skinnyOperators() " {{{
+  syntax match hsOperator
+    \ '[!#$%&*+./<=>?@\^|-~:]'
+    \ display
+
+  highlight default link hsOperator Operator
+endfunction " }}}
 
 function! vim2hs#haskell#syntax#fatDelimiters() " {{{
   syntax match hsDelimiter
