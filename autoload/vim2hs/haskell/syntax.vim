@@ -1,18 +1,10 @@
 function! vim2hs#haskell#syntax#operators() " {{{
   syntax match hsOperator
-    \ '[([:blank:]]\@<=\%([[:upper:]]\k*\.\)*[-!#$%&\*\+/=\?@\\^|~.<>][-!#$%&\*\+/=\?@\\^|~:.<>]*\ze\_[[:blank:])]'
+    \ '[([:blank:]]\@<=\%([[:upper:]]\k*\.\)*[-!#$%&\*+/=\?@\\^|~.<>][-!#$%&\*\+/=\?@\\^|~:.<>]*\ze\_[[:blank:])]'
     \ display
 
   syntax match hsOperator
     \ "`\k\%(\k\|\.\)*`"
-    \ display
-
-  highlight default link hsOperator Operator
-endfunction " }}}
-
-function! vim2hs#haskell#syntax#skinnyOperators() " {{{
-  syntax match hsOperator
-    \ '[!#$%&*+./<=>?@\^|-~:]'
     \ display
 
   highlight default link hsOperator Operator

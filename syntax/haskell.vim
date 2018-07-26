@@ -12,8 +12,7 @@ call vim2hs#letdefault('g:haskell_delimiters'           , 1)
 call vim2hs#letdefault('g:haskell_ffi'                  , 1)
 call vim2hs#letdefault('g:haskell_haddock'              , 0)
 call vim2hs#letdefault('g:haskell_hsp'                  , 1)
-call vim2hs#letdefault('g:haskell_operators'            , 0)
-call vim2hs#letdefault('g:haskell_skinnyOperators'      , 1)
+call vim2hs#letdefault('g:haskell_operators'            , 1)
 call vim2hs#letdefault('g:haskell_indent_double'        , 0)
 call vim2hs#letdefault('g:haskell_interpolation'        , 1)
 call vim2hs#letdefault('g:haskell_jmacro'               , 1)
@@ -30,10 +29,6 @@ call vim2hs#letdefault('g:haskell_xml'                  , 1)
 
 if g:haskell_operators
   call vim2hs#haskell#syntax#operators()
-endif
-
-if g:haskell_skinnyOperators
-  call vim2hs#haskell#syntax#skinnyOperators()
 endif
 
 if g:haskell_ffi
