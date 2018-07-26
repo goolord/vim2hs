@@ -11,7 +11,7 @@ function! vim2hs#haskell#syntax#operators() " {{{
 endfunction " }}}
 
 
-function! vim2hs#haskell#syntax#delimiters() " {{{
+function! vim2hs#haskell#syntax#fatDelimiters() " {{{
   syntax match hsDelimiter
     \ '(\|)\|\[\|\]\|,\|;\|{\|}\|\k\@<!_\k\@!\|[[:punct:]]\@<!@[[:punct:]]\@!'
     \ display
@@ -22,6 +22,13 @@ function! vim2hs#haskell#syntax#delimiters() " {{{
   highlight default link hsDelimiter Delimiter
 endfunction " }}}
 
+function! vim2hs#haskell#syntax#delimiters() " {{{
+  syntax match hsDelimiter
+    \ '[(),\[\]]'
+    \ display
+
+  highlight default link hsDelimiter Delimiter
+endfunction " }}}
 
 function! vim2hs#haskell#syntax#keywords(conceal_wide, conceal_enumerations, conceal_bad) " {{{
   syntax case match

@@ -1,30 +1,37 @@
 syntax clear
 
 
-call vim2hs#letdefault('g:haskell_haddock'              , 0)
-call vim2hs#letdefault('g:haskell_ffi'                  , 1)
-call vim2hs#letdefault('g:haskell_cpp'                  , 1)
-call vim2hs#letdefault('g:haskell_th'                   , 1)
-call vim2hs#letdefault('g:haskell_quasi'                , 1)
-call vim2hs#letdefault('g:haskell_interpolation'        , 1)
-call vim2hs#letdefault('g:haskell_regex'                , 1)
-call vim2hs#letdefault('g:haskell_jmacro'               , 1)
-call vim2hs#letdefault('g:haskell_shqq'                 , 1)
-call vim2hs#letdefault('g:haskell_rlangqq'              , 1)
-call vim2hs#letdefault('g:haskell_sql'                  , 1)
-call vim2hs#letdefault('g:haskell_json'                 , 1)
-call vim2hs#letdefault('g:haskell_xml'                  , 1)
-call vim2hs#letdefault('g:haskell_hsp'                  , 1)
 call vim2hs#letdefault('g:haskell_conceal'              , 1)
+call vim2hs#letdefault('g:haskell_conceal_bad'          , 0)
 call vim2hs#letdefault('g:haskell_conceal_comments'     , 0)
 call vim2hs#letdefault('g:haskell_conceal_enumerations' , 0)
 call vim2hs#letdefault('g:haskell_conceal_wide'         , 0)
-call vim2hs#letdefault('g:haskell_conceal_bad'          , 0)
-call vim2hs#letdefault('g:haskell_multiline_strings'    , 0)
+call vim2hs#letdefault('g:haskell_cpp'                  , 1)
+call vim2hs#letdefault('g:haskell_fatDelimiters'        , 0)
+call vim2hs#letdefault('g:haskell_delimiters'           , 1)
+call vim2hs#letdefault('g:haskell_ffi'                  , 1)
+call vim2hs#letdefault('g:haskell_haddock'              , 0)
+call vim2hs#letdefault('g:haskell_hsp'                  , 1)
+call vim2hs#letdefault('g:haskell_ifoperators'          , 0)
 call vim2hs#letdefault('g:haskell_indent_double'        , 0)
+call vim2hs#letdefault('g:haskell_interpolation'        , 1)
+call vim2hs#letdefault('g:haskell_jmacro'               , 1)
+call vim2hs#letdefault('g:haskell_json'                 , 1)
+call vim2hs#letdefault('g:haskell_multiline_strings'    , 0)
+call vim2hs#letdefault('g:haskell_quasi'                , 1)
+call vim2hs#letdefault('g:haskell_regex'                , 1)
+call vim2hs#letdefault('g:haskell_rlangqq'              , 1)
+call vim2hs#letdefault('g:haskell_shqq'                 , 1)
+call vim2hs#letdefault('g:haskell_sql'                  , 1)
+call vim2hs#letdefault('g:haskell_th'                   , 1)
+call vim2hs#letdefault('g:haskell_xml'                  , 1)
 
 
-call vim2hs#haskell#syntax#operators()
+" pretty sure this is unecessary and also highlights 
+" with the foreground color, so this is disabled by default
+if g:haskell_ifoperators
+  call vim2hs#haskell#syntax#operators()
+endif
 
 if g:haskell_ffi
   call vim2hs#haskell#syntax#ffi()
@@ -34,7 +41,13 @@ if g:haskell_cpp
   call vim2hs#haskell#syntax#cpp()
 endif
 
-call vim2hs#haskell#syntax#delimiters()
+if g:haskell_fatDelimiters
+  call vim2hs#haskell#syntax#fatDelimiters()
+endif
+
+if g:haskell_delimiters
+  call vim2hs#haskell#syntax#delimiters()
+endif
 
 if g:haskell_quasi
   call vim2hs#haskell#quasi#quote()
