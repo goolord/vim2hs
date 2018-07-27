@@ -52,13 +52,13 @@ function! vim2hs#cabalconfig#statements() " {{{
 endfunction " }}}
 
 
-function! vim2hs#cabalconfig#folds() " {{{
-  syntax region ccFold
-    \ start='\c^\%(install-dirs\)\>'
-    \ skip='\n#\|\n--'
-    \ end='\ze\%(\s*\n\)\+\S'
-    \ transparent fold
+" function! vim2hs#cabalconfig#folds() " {{{
+  " syntax region ccFold
+    " \ start='\c^\%(install-dirs\)\>'
+    " \ skip='\n#\|\n--'
+    " \ end='\ze\%(\s*\n\)\+\S'
+    " \ transparent fold
 
-  setlocal foldmethod=syntax
-  setlocal foldtext=getline(v:foldstart)
-endfunction " }}}
+  " setlocal foldmethod=syntax
+  " setlocal foldtext=getline(v:foldstart)
+" endfunction " }}}

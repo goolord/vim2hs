@@ -90,22 +90,22 @@ function! vim2hs#haskell#editing#indenting() " {{{
 endfunction " }}}
 
 
-function! vim2hs#haskell#editing#foldtext() " {{{
-  let l:line = getline(v:foldstart)
-  let l:keyword = matchstr(l:line, '\k\+')
-  if count(['type', 'newtype', 'data'], l:keyword)
-    return substitute(l:line, '\s*=.*', '', '') . ' '
-  elseif count(['class', 'instance'], l:keyword)
-    return substitute(l:line, '\s*\<where\>.*', '', '') . ' '
-  endif
-  return l:keyword . ' = '
-endfunction " }}}
+" function! vim2hs#haskell#editing#foldtext() " {{{
+  " let l:line = getline(v:foldstart)
+  " let l:keyword = matchstr(l:line, '\k\+')
+  " if count(['type', 'newtype', 'data'], l:keyword)
+    " return substitute(l:line, '\s*=.*', '', '') . ' '
+  " elseif count(['class', 'instance'], l:keyword)
+    " return substitute(l:line, '\s*\<where\>.*', '', '') . ' '
+  " endif
+  " return l:keyword . ' = '
+" endfunction " }}}
 
 
-function! vim2hs#haskell#editing#folding() " {{{
-  setlocal foldmethod=syntax
-  setlocal foldtext=vim2hs#haskell#editing#foldtext()
-endfunction " }}}
+" function! vim2hs#haskell#editing#folding() " {{{
+  " setlocal foldmethod=syntax
+  " setlocal foldtext=vim2hs#haskell#editing#foldtext()
+" endfunction " }}}
 
 
 function! vim2hs#haskell#editing#keywords() " {{{
