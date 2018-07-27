@@ -1,3 +1,4 @@
+
 `vim2hs ⦂ Vim → Haskell`
 ========================
 
@@ -41,7 +42,7 @@ Overview
 
 ### Top-level Definitions
 
-The syntax highlighting of top-level definitions are improved in vim2hs:
+The syntax highlighting of top-level definitions are improved in vim2hs
 
 ![Bindings screenshot](https://github.com/dag/vim2hs/raw/master/screenshots/bindings.png)
 
@@ -109,9 +110,7 @@ let g:haskell_fold          = 0
 [Haskell Server Pages](http://hackage.haskell.org/package/hsp) and
 [Haskell Source with XML](http://hackage.haskell.org/package/hsx)
 pre-processes literal XML in Haskell source code into function application
-and vim2hs provides limited support for this syntax - I have yet to figure
-out how to highlight the body of XML elements differently while still
-highlighting the attributes as Haskell.
+and vim2hs provides limited support for this syntax
 
 ![HSP screenshot](https://github.com/dag/vim2hs/raw/master/screenshots/hsp.png)
 
@@ -122,8 +121,7 @@ let g:haskell_hsp = 0
 ```
 
 [Heist](http://hackage.haskell.org/package/heist) is a simple XML/HTML
-templating system; simple enough that you could simply use the `xml` or
-`html` filetype in Vim for these templates.  However, it includes a number
+templating system.  It includes a number
 of pre-defined "splices" and a special syntax for "splice interpolation" in
 attributes.  Included with vim2hs is a syntax file for Heist HTML templates
 and automatic filetype detection for `*.tpl` files.
@@ -132,17 +130,13 @@ and automatic filetype detection for `*.tpl` files.
 
 ### Strings
 
-Haskell actually supports multi-line strings by escaping the newline, but I
-don't think it's a widely used feature and I think quasi quoting is better
-for such purposes.  Thus, by default, I have opted to keep string literals from
-crossing lines so half your source file doesn't highlight as a string while
-you're entering one. Instead, string literals without a matching end quote
-highlight as errors.
+Haskell actually supports multi-line strings by escaping the newline, 
+but It is likely uncommon/bad practice. 
+Instead, string literals without a matching end quote highlight as errors.
 
 ![Strings screenshot](https://github.com/dag/vim2hs/raw/master/screenshots/strings.png)
 
-There is a configuration option for this. To enable multi-line strings, use
-this:
+To enable multi-line strings, use this:
 
 ```vim
 :let g:haskell_multiline_strings = 1
@@ -172,15 +166,15 @@ recommend setting up
 
 ### UltiSnips
 
-If you're using the excellent
+If you're using the 
 [UltiSnips](https://github.com/sirver/ultisnips) Vimscript, vim2hs provides
 some useful snippets for Haskell programming.  You can list all active
-snippets by hitting `Ctrl+Tab` in INPUT mode.
+snippets (depending on your terminal emulator and vim configuration)
+ by hitting `Ctrl+Tab` in INPUT mode.
 
 ### Tabular
 
-Another useful Vimscript is
-[Tabular](https://github.com/godlygeek/tabular).  If it's installed, vim2hs
+If [Tabular](https://github.com/godlygeek/tabular) is installed, vim2hs
 adds some named patterns useful for maintaining layout in Haskell code.
 You can list all named patterns by tab-completing after entering the
 `:Tabularize` command.  You probably want to configure some mappings or
