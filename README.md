@@ -194,7 +194,7 @@ let g:haskell_tabular = 0
 
 ### PERFORMANCE
 
-vim2hs can be pretty slow on big files, I am working on this but if you
+vim2hs can be pretty slow on big files. I am working on this, but if you
 need a hotfix, you can disable syntax that is likely superfluous:
 
 ```let g:haskell_conceal       = 0
