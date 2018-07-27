@@ -192,7 +192,7 @@ To disable them, use this configuration:
 let g:haskell_tabular = 0
 ```
 
-### PERFORMANCE
+### Performance
 
 vim2hs can be pretty slow on big files. I am working on this, but if you
 need a hotfix, you can disable syntax that is likely superfluous:
