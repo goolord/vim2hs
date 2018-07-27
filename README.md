@@ -34,6 +34,7 @@ Installation
 
 You need at least Vim 7.3, Beyond that, just clone this repo and add it to 
 your `'runtimepath'`.
+
 [Vundle](https://github.com/gmarik/vundle) & [Pathogen](https://github.com/tpope/vim-pathogen) are both popular tools for automating that.
 
 Overview
