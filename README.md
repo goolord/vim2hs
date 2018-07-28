@@ -1,4 +1,5 @@
 
+
 `vim2hs ⦂ Vim → Haskell`
 ========================
 
@@ -185,6 +186,12 @@ To disable them, use this configuration:
 ```vim
 let g:haskell_tabular = 0
 ```
+
+### typeOf
+
+vim2hs provides a plugin for using [goolord/typeOf](https://github.com/goolord/typeof) to insert type signatures using the inferred type.
+
+![Imgur Image](https://i.imgur.com/0iwJ39t.gifv)
 
 ### Performance
 
