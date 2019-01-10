@@ -7,7 +7,7 @@
 
 **This is an updated fork of https://github.com/dag/vim2hs**
 
-I'm no longer convinced it is worth it to maintain this fork, but I may make a seperate collection of vimscripts for haskell in the futrue. for now I would actually reccommend https://github.com/neovimhaskell/haskell-vim or https://github.com/goolord/haskell-vim
+I'm no longer convinced it is worth it to maintain this fork. For now I would actually reccommend https://github.com/neovimhaskell/haskell-vim or https://github.com/goolord/haskell-vim
 
 Features
 --------
