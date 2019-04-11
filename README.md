@@ -189,12 +189,6 @@ To disable them, use this configuration:
 let g:haskell_tabular = 0
 ```
 
-### typeOf
-
-vim2hs provides a plugin for using [goolord/typeOf](https://github.com/goolord/typeof) to insert type signatures using the inferred type.
-
-![typeOf Gif](https://media.giphy.com/media/2tOuFQrMYKgU9lVb30/giphy.gif)
-
 ### Performance
 
 vim2hs can be pretty slow on big files. I am working on this, but if you
